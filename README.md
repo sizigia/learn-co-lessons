@@ -9,7 +9,7 @@
 
 Before moving on, let's make sure we understand where we are.  We started this discussion by simply plotting our data.  Then we drew a regression line to estimate how a change in our input affected a change in our output.
 
-![regression-scatter.png](attachment:regression-scatter.png)
+![regression-scatter.png](./regression-scatter.png)
 
 Now, because our regression lines do not perfectly predict our data, we put a number to a regression line's accuracy by calculating the residual sum of squares (RSS).  And as we know, the size of the RSS is a function of our y-intercept and slope values, so we can plot our RSS as a function of one of these variables.
 

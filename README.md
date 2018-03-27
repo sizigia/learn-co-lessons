@@ -1,6 +1,12 @@
 
 ## A quick glance at numbers
 
+### Objectives
+* Operating on numbers in Python
+* The different datatypes for numbers
+* Boolean values and how we can use them in our code
+* Deciding which datatypes to use in our program
+
 All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think about what the common operations are with numbers, we get a pretty good idea for what Python allows us to do with numbers.
 
 
@@ -237,7 +243,7 @@ Here we saw our first method for switching between types: simply write the name 
 
 ```python
 bool(100)
-#=> True
+# True
 ```
 
 
@@ -250,7 +256,7 @@ bool(100)
 
 ```python
 bool(0)
-#=> False
+# False
 ```
 
 

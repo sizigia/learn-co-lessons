@@ -6,6 +6,7 @@ All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think 
 
 ```python
 1 + 1
+# 2
 ```
 
 
@@ -18,6 +19,7 @@ All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think 
 
 ```python
 2 * 5
+# 10
 ```
 
 
@@ -32,6 +34,7 @@ If we look at a number for its type, we find something slightly different.
 
 ```python
 type(10)
+# int
 ```
 
 
@@ -44,6 +47,7 @@ type(10)
 
 ```python
 type(10.2)
+# float
 ```
 
 
@@ -58,12 +62,13 @@ Python is simply indicating that a number without a decimal is called an `int` f
 
 ```python
 3/4 + 10
+# 10.75
 ```
 
 
 
 
-    10.75
+    10
 
 
 
@@ -76,6 +81,7 @@ A boolean has two possible values: **True** or **False**.
 
 ```python
 type(True)
+# bool
 ```
 
 
@@ -90,6 +96,7 @@ It's fairly rare for programmers to explicitly write the word `True` or `False`.
 
 ```python
 "Homer Simpson".endswith("Simpson")
+# True
 ```
 
 
@@ -102,6 +109,7 @@ It's fairly rare for programmers to explicitly write the word `True` or `False`.
 
 ```python
 "Homer Simpson".endswith("Homer")
+# False
 ```
 
 
@@ -116,6 +124,7 @@ And as you might imagine, a boolean can be returned from a math operation as wel
 
 ```python
 3 * 5 < 10
+# False
 ```
 
 
@@ -136,6 +145,7 @@ For now, it's interesting to think of how methods allow us to change between dat
 
 ```python
 "west 34th street"
+# 'west 34th street'
 ```
 
 
@@ -152,6 +162,7 @@ The answer is by really thinking about what we want to do with the data.  If we 
 
 ```python
 "34th street".title()
+# '34th Street'
 ```
 
 
@@ -166,6 +177,7 @@ What if we are trying to ask if a number in that string is larger than another n
 
 ```python
 34 < 22
+# False
 ```
 
 
@@ -180,18 +192,14 @@ But would a method like less than ( `<` ) work with a string? Does it make sense
 
 ```python
 "34th street" < 22
+# False
 ```
 
 
-    ---------------------------------------------------------------------------
 
-    TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-41-08662b2a59f1> in <module>()
-    ----> 1 "34th street" < 22
-    
+    False
 
-    TypeError: '<' not supported between instances of 'str' and 'int'
 
 
 Well, now we know for sure.  So, if we want to help our restaurant with deliveries, we should convert our number from a string to a number and then make the comparison.
@@ -199,6 +207,7 @@ Well, now we know for sure.  So, if we want to help our restaurant with deliveri
 
 ```python
 int('34') < 22
+# False
 ```
 
 
@@ -213,6 +222,7 @@ And if we want to go from a number to a string, for example to produce an addres
 
 ```python
 str(34) + 'th Street'
+# '34th Street'
 ```
 
 
@@ -227,6 +237,7 @@ Here we saw our first method for switching between types: simply write the name 
 
 ```python
 bool(100)
+#=> True
 ```
 
 
@@ -239,6 +250,7 @@ bool(100)
 
 ```python
 bool(0)
+#=> False
 ```
 
 

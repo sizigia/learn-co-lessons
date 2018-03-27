@@ -1,7 +1,7 @@
 
 ## A quick glance at numbers
 
-All of us are familiar with numbers.  1492 is a number.  So is 34.  And if you think about what you'd like to do with a number, you probably have a pretty strong guess of what Python allows you to do with numbers.
+All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think about what the common operations are with numbers, we get a pretty good idea for what Python allows us to do with numbers.
 
 
 ```python
@@ -27,7 +27,7 @@ All of us are familiar with numbers.  1492 is a number.  So is 34.  And if you t
 
 
 
-If you look ask a number for a type, you would find something slightly different.
+If we look at a number for its type, we find something slightly different.
 
 
 ```python
@@ -53,7 +53,7 @@ type(10.2)
 
 
 
-But all python is indicating is that a number without a decimal is called an `int` for integer and a number with a decimal is called a `float`.  But you can move forward safely with just thinking of them as numbers and everything goes fine.
+Python is simply indicating that a number without a decimal is called an `int` for integer, and a number with a decimal is called a `float`. For now, we can think of both of these as numbers.
 
 
 ```python
@@ -67,9 +67,11 @@ But all python is indicating is that a number without a decimal is called an `in
 
 
 
-### And what is a boolean
+As we can see in the above example, `3/4` would resolve to the `float` `0.75`, and a `float` plus an `int` resolves to a `float`. 
 
-A boolean is used to divide into two: True or False.
+### What is a boolean?
+
+A boolean has two possible values: **True** or **False**.
 
 
 ```python
@@ -123,13 +125,13 @@ And as you might imagine, a boolean can be returned from a math operation as wel
 
 
 
-You will see later on, that using these returned booleans, we can make decisions with our code.  Send this email if a user's name is Simpson, or send an invite if the user is in a target age group.  But we'll get there.
+You will see later on that by utilizing these returned booleans, we can make decisions with our code. For example: send this email if a user's last name is Simpson, or send an invite if the user is in a target age group. We aren't there yet, but we'll get there!
 
 ### Datatypes as a choice
 
 > "Bad programmers worry about the code. Good programmers worry about data structures and their relationships." - Torvald 
 
-For now, it's interesting to think of how methods allow us to change between datatypes.  And when we may want our data to be in one datatype versus another.  We started this lesson by saying that 34 is a number.  But what if it's not.
+For now, it's interesting to think of how methods allow us to change between datatypes and to think of when we may want our data to be in one datatype versus another.  We started this lesson by saying that 34 is a number.  But what if it's not?
 
 
 ```python
@@ -159,7 +161,7 @@ The answer is by really thinking about what we want to do with the data.  If we 
 
 
 
-However, what if we are trying to ask if a number in that string is larger than another number.  For example, a restaurant that only delivers food below 22nd street might use a program to write something like: 
+What if we are trying to ask if a number in that string is larger than another number?  For example, a restaurant that only delivers food below 22nd street might use a program to write something like: 
 
 
 ```python
@@ -173,7 +175,7 @@ However, what if we are trying to ask if a number in that string is larger than 
 
 
 
-But would a method like less than, be in a string?  Does it make sense for a string, text, to answer whether it is less than or greater than something?  Trying things is free, so let's give it a shot.
+But would a method like less than ( `<` ) work with a string? Does it make sense for a string or text to answer whether it is less than or greater than a number? Trying things is free, so let's give it a shot.
 
 
 ```python
@@ -192,7 +194,7 @@ But would a method like less than, be in a string?  Does it make sense for a str
     TypeError: '<' not supported between instances of 'str' and 'int'
 
 
-Well, now we know for sure.  So if we want to help our restaurant with deliveries, we should convert our number from a string to a number and then make the comparison.
+Well, now we know for sure.  So, if we want to help our restaurant with deliveries, we should convert our number from a string to a number and then make the comparison.
 
 
 ```python
@@ -206,7 +208,7 @@ int('34') < 22
 
 
 
-And if we want to go from a number to the string, for example to produce an address, we again need to pay attention to the type.
+And if we want to go from a number to a string, for example to produce an address, we again need to pay attention to the type.
 
 
 ```python
@@ -220,7 +222,7 @@ str(34) + 'th Street'
 
 
 
-So here we saw our first method for switching between types: simply write the name of the type followed by parentheses and the data.  After identifying this pattern, we should really explore with our other type the boolean.
+Here we saw our first method for switching between types: simply write the name of the type followed by parentheses and the data on which we want to operate. After introducing this pattern, we can start to explore with others types such as the boolean.
 
 
 ```python
@@ -250,6 +252,6 @@ Great, so we can coerce a number to a boolean as well.  And we are beginning to 
 
 ### Summary
 
-In this section, we introduced two new types of data: numbers and booleans.  We saw that numbers allow us to perform standard math operations. And we saw that booleans answer whether something is True or False, and are a form of how our program or different methods can respond to questions.
+In this section, we introduced two new types of data: numbers and booleans. We saw that numbers allow us to perform standard math operations, and we saw that booleans answer whether something is True or False, and serve as a way our program or different methods can respond to questions.
 
-Now that we have seen almost all of our Python datatypes, we talked about how to choose a datatype, and how to switch between datatypes.  We said that we choose a datatype based on the capabilities that we want to give to that data: should it answer whether it is larger or smaller, or does it make sense to capitalize?  We entered this discussion so you begin to think of what you are deciding when putting a data in a specific form.  We also talked about this so that you can begin to identify coercion methods like `bool` and `str` that switch us between datatypes. 
+We have seen almost all of our Python datatypes, we talked about how to choose a datatype, and we talked about how to switch between datatypes.  We said that we choose a datatype based on the capabilities that we want to give to that data: should it answer whether it is larger or smaller, or does it make sense to capitalize? The goal of this discussion is to begin thinking about why we decide to put data in specific types (i.e. string, number, boolean). We also introduced coercion methods like `bool` and `str` that switch between datatypes. 

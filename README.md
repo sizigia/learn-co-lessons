@@ -1,30 +1,32 @@
 
 # Functions lab
 
-As we know, we can use functions to give a name to sequences of our code, to make it more expressive.  We can also use functions to allow us to reuse code.  In this lab we will get practice in using functions for these purposes.
+## Introduction
 
-### Objectives
+As we know, we can use functions to name sequences of our code, thus making our code more expressive. We can also use functions to allow us to reuse our code. In this lab we will practice using functions for these purposes.
 
-* Practice declaring and returning values from function
-* Practice accessing variables outside of a function's scope, from inside of a function
+## Objectives
 
-### Writing our first functions
+* Practice declaring and returning values from functions
+* Practice accessing variables that are outside of a function's scope, from inside of a function
 
-Imagine we work in a diner.  We have a list of `orders` which we assign below.  Write a function called `number_of_orders` that returns the current number of orders.
+## Writing our first functions
+
+Imagine we are working on our list of travel destinations -- which is really turning out to be a full time job. We have our list of `travel_destinations` which we assign below. Write a function called `number_of_destinations` that returns the number of destinations we have on our list.
 
 
 ```python
-orders = ['turkey sandwich', 'eggs']
-def number_of_orders():
+travel_destinations = ['argentina', 'mexico', 'italy']
+def number_of_destinations():
     pass
 ```
 
 
 ```python
-number_of_orders() # 2
+number_of_destinations() # 3
 ```
 
-Now write another function called `next_up` that returns the first order (the order with the lowest index), in the `orders` list.
+Now write another function called `next_up` that returns our first destination (the destination with the lowest index), in the `travel_destinations` list.
 
 
 ```python
@@ -34,66 +36,62 @@ def next_up():
 
 
 ```python
-orders = ['turkey sandwich', 'eggs']
-next_up() # 'turkey sandwich'
-
-orders = ['beet salad', 'fennel']
-next_up() # 'beet salad'
+travel_destinations = ['argentina', 'mexico', 'italy']
+next_up() # 'argentina'
 ```
-
-Ok, now write a function called `healthy_order` that returns the string `'spinach salad'`.
 
 
 ```python
-def healthy_order():
+travel_destinations = ['finland', 'canada', 'croatia']
+next_up() # 'finland'
+```
+
+Ok, now write a function called `favorite_destination` that returns the string `'madagascar'`.
+
+
+```python
+def favorite_destination():
     pass
 ```
 
 
 ```python
-healthy_order() # 'spinach salad'
+favorite_destination() # 'madagascar'
 ```
 
-Now let's declare an array called `orders`.  Change the function `healthy_order` so that it continues to return the string `'spinach salad'`, but also adds the string `'spinach salad'` to the end of the list of orders.
+Again, let's declare an array called `travel_destinations`. Change the function `favorite_destination` so that it continues to return the string `'madagascar'`, but also adds the string `'madagascar'` to the end of the list of destinations.
 
 
 ```python
-orders = ['turkey sandwich', 'eggs']
-healthy_order()
-orders[-1] # 'spinach salad'
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+favorite_destination()
+travel_destinations[-1] # 'madagascar'
 ```
 
-
-
-
-    'eggs'
-
-
-
-Now let's write another function iterates through the list of `orders` and capitalizes the first letter of each word in the order.  It should return a list of capitalized orders.
+Now let's write another function which iterates through the list of `destinations` and capitalizes the first letter of each word. It should return a list of capitalized destinations.
 
 
 ```python
-orders = ['spinach salad', 'turkey sandwich']
-def capitalize_orders():
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+def capitalize_countries():
     pass
 ```
 
 
 ```python
-capitalize_orders() # ['Spinach Salad', 'Turkey Sandwich']
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
 ```
 
-Now if someone adds, an upcapitalized order, we can simply call our function again to return a list of capitalized orders.
+Great! Now if someone adds a country that is lowercased to our list of destinations, we can simply call our function again to capitalize each of the destinations in the list.
 
 
 ```python
-orders = ['spinach salad', 'turkey sandwich']
-capitalize_orders() # ['Spinach Salad', 'Turkey Sandwich']
-orders.append('eggs')
-capitalize_orders() # ['Spinach Salad', 'Turkey Sandwich', 'Eggs']
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
+travel_destinations.append('japan')
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia', 'Japan']
 ```
 
-### Summary
+## Summary
 
-Great job.  Through this lab you were able to get practice both writing and returning values from functions.  You also practiced accessing variables not local to the function, but in the global scope.
+Great job! In this lab we were able to get practice both writing and returning values from functions. We also practiced accessing variables not local to the function but in the global scope.

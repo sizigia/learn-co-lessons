@@ -2,7 +2,7 @@ import unittest2 as unittest
 import pdb
 from ipynb.fs.full.index import *
 
-class TestPythonFunctionss(unittest.TestCase):
+class TestPythonFunctions(unittest.TestCase):
     def test_number_of_destinations_func(self):
         self.assertEqual(number_of_destinations(), len(travel_destinations))
 

@@ -1,19 +1,26 @@
 import unittest2 as unittest
 from ipynb.fs.full.index import *
 
-class TestPythonLoops(unittest.TestCase):
-    def test_city_indices_list(self):
-        self.assertEqual(city_indices, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+class TestPythonFunctionsWithArguments(unittest.TestCase):
+    def test_restaurant_name_func(self):
+        self.assertEqual(restaurant_name(fork_fig), 'Fork & Fig')
+        self.assertEqual(restaurant_name(frontier_restaurant), 'Frontier Restaurant')
 
-    def test_names_and_ranks_list(self):
-        self.assertEqual(names_and_ranks[0], '1. Solta')
-        self.assertEqual(names_and_ranks[-1], '12. Pyeongchang')
+    def test_restaurant_rating_func(self):
+        self.assertEqual(restaurant_rating(fork_fig), 4.5)
+        self.assertEqual(restaurant_rating(frontier_restaurant), 4.0)
 
-    def test_city_indices_list(self):
-        self.assertEqual(city_indices, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+    def test_is_better_func(self):
+        self.assertEqual(is_better(frontier_restaurant, fork_fig), False)
+        self.assertEqual(is_better(fork_fig, frontier_restaurant), True)
+        self.assertEqual(is_better(fork_fig, fork_fig), False)
 
-    def test_city_populations(self):
-        self.assertEqual(city_populations, [1700, 84554, 13591863, 287651, 32237, 928850, 559277, 60000, 0, 4000, 630, 2581000])
+    def test_is_cheaper_func(self):
+        self.assertEqual(is_cheaper(frontier_restaurant, fork_fig), True)
+        self.assertEqual(is_cheaper(fork_fig, frontier_restaurant), False)
+        self.assertEqual(is_cheaper(fork_fig, fork_fig), False)
 
-    def test_city_populations(self):
-        self.assertEqual(city_areas, [59, 68, 4758, 3750, 33, 200, 491, 8300, 672, 27, 2731571, 3194])
+    def test_high_rating_func(self):
+        self.assertEqual(high_rating(fork_fig, 4), True)
+        self.assertEqual(high_rating(fork_fig, 5), False)
+        self.assertEqual(high_rating(frontier_restaurant, 4), True)

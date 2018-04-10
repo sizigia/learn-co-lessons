@@ -1,5 +1,4 @@
 import unittest2 as unittest
-import pdb
 from ipynb.fs.full.index import *
 
 class TestPythonFunctions(unittest.TestCase):

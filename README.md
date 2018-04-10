@@ -1,13 +1,13 @@
 
-# Functions with arguments lab
+# Functions with Arguments Lab
 
 ### Introduction
 
-In this lesson, we will be scoping out some of the things that we can do while in Albuquerque.  To do so, we'll be working with information pulled from the Yelp.  Yelp is great for learning about what to do in Albuquerque, but it gives us back a lot of information.  We'll use what we know about functions to format out data. 
+In this lesson, we have decided to visit another of our travel destinations! This time we have chosen to visit Albuquerque, but we aren't very familiar with this city and are quite hungary after our long flight. We will be working with information we pulled from the Yelp database to help us find a restaurant where we can satisfy our hunger. While Yelp is great for learning about what to do in Albuquerque, it gives us back a lot of information. We'll use what we know about functions and dictionaries to format and read our data more easily. 
 
-### Exploring two restuarants in Albuquerque
+### Exploring Two Restuarants in Albuquerque
 
-This is what the Yelp provides us for a information about a single restaurant.  Below is information about Fork and Fig, but all restaurants are provided with this information.
+Let's take a quick look at the information Yelp provides for a single restaurant:
 
 
 ```python
@@ -37,7 +37,7 @@ fork_fig = {'categories': [{'alias': 'burgers', 'title': 'Burgers'},
  'url': 'https://www.yelp.com/biz/fork-and-fig-albuquerque?adjust_creative=SYc8R4Gowqru5h4SBKZXsQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SYc8R4Gowqru5h4SBKZXsQ'}
 ```
 
-For example, here is another one.
+Above is the information provided about `Fork & Fig`, but all restaurants are provided with this information.  For example, here is the information provided by Yelp for another restaurant, `Frontier Restaurant`.
 
 
 ```python
@@ -67,7 +67,7 @@ frontier_restaurant = {'categories': [{'alias': 'mexican', 'title': 'Mexican'},
  'url': 'https://www.yelp.com/biz/frontier-restaurant-albuquerque-2?adjust_creative=SYc8R4Gowqru5h4SBKZXsQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SYc8R4Gowqru5h4SBKZXsQ'}
 ```
 
-One way to quickly view a dictionary is to look at the keys of the dictionary.
+As we already know, one way to quickly view the attributes of a dictionary is to look at the keys of the dictionary.
 
 
 ```python
@@ -75,34 +75,25 @@ fork_fig.keys()
 ```
 
 
-
-
-    dict_keys(['categories', 'coordinates', 'display_phone', 'distance', 'id', 'image_url', 'is_closed', 'location', 'name', 'phone', 'price', 'rating', 'review_count', 'transactions', 'url'])
-
-
-
-
 ```python
 frontier_restaurant.keys()
 ```
 
 
+```python
+fork_fig.keys() == frontier_restaurant.keys()
+```
 
-
-    dict_keys(['categories', 'coordinates', 'display_phone', 'distance', 'id', 'image_url', 'is_closed', 'location', 'name', 'phone', 'price', 'rating', 'review_count', 'transactions', 'url'])
-
-
-
-As you can see, Yelp provides us with the same information on both restaurants.  
+As we can see from our above comparison, Yelp provides us with the same information for both restaurants.  
 
 ### Writing our functions
 
-Ok, now let's write our functions.  Write a function called `restaurant_name` that provided a dictionary representing a restaurant like you saw above, resturns that restaurant's name.
+Ok, now let's write our functions.  Write a function called `restaurant_name` that, provided a dictionary representing a restaurant like you saw above, resturns that restaurant's name.
 
 
 ```python
 def restaurant_name(restaurant):
-    return restaurant['name']
+    pass
 ```
 
 
@@ -111,30 +102,16 @@ restaurant_name(frontier_restaurant) # 'Frontier Restaurant'
 ```
 
 
-
-
-    'Frontier Restaurant'
-
-
-
-
 ```python
-restaurant_name(fork_fig) # 'Frontier Restaurant'
+restaurant_name(fork_fig) # 'Fork & Fig'
 ```
 
-
-
-
-    'Fork & Fig'
-
-
-
-Now write a function called `restaurant_rating` that returns the rating of the restaurant provided a function.
+Now write a function called `restaurant_rating` that returns the rating of the provided restaurant.
 
 
 ```python
 def restaurant_rating(restaurant):
-    return restaurant['rating']
+    pass
 ```
 
 
@@ -143,23 +120,9 @@ restaurant_rating(frontier_restaurant) # 4.0
 ```
 
 
-
-
-    4.0
-
-
-
-
 ```python
 restaurant_rating(fork_fig) # 4.5
 ```
-
-
-
-
-    4.5
-
-
 
 ### Comparing restaurants
 
@@ -168,68 +131,72 @@ Now let's write a function called `is_better` that returns `True` if a restauran
 
 ```python
 def is_better(restaurant, alternative):
-    return restaurant['rating'] > alternative['rating']
+    pass
 ```
 
 
 ```python
 is_better(frontier_restaurant, fork_fig) # False
-is_better(fork_fig, frontier_restaurant) # True
-is_better(fork_fig, fork_fig) # False
 ```
 
 
+```python
+is_better(fork_fig, frontier_restaurant) # True
+```
 
 
-    False
+```python
+is_better(fork_fig, fork_fig) # False
+```
 
+Now let's write a function called `is_cheaper` that returns `True` if a restaurant has a higher price, that is the restaurnat has more `'$'` signs, than an alternative restaurant. The first argument should be called `restaurant` and the second argument should be called `alternative`. The function returns `False` if the two prices are equal.
 
-
-Now let's write a function called `is_cheaper` that returns `True` if a restaurant has a higher price, that is has more `'$'` signs, than an alternative restaurant.  The first argument should be called `restaurant` and the second argument should be called `alternative`.  The function returns `False` if the two prices are equal.
+> **Hint:** *Strings in Python respond to then `len` function.*
 
 
 ```python
 def is_cheaper(restaurant, alternative):
-    return len(restaurant['price']) < len(alternative['price'])
+    pass
 ```
 
 
 ```python
 is_cheaper(fork_fig, frontier_restaurant) # False
-is_cheaper(frontier_restaurant, fork_fig) # True
-is_cheaper(fork_fig, fork_fig) # False
 ```
 
 
-
-
-    False
-
-
-
-Now write a function called `high_rating` than that takes a `restaurant` as a first argument and a number that represents a rating as the second argument.  If the second argument is not provided, then the function returns `True` so long as the retaurant's rating is greater than 4.
+```python
+is_cheaper(frontier_restaurant, fork_fig) # True
+```
 
 
 ```python
-def high_rating(restaurant, rating = 4):
-    return restaurant['rating'] > rating
+is_cheaper(fork_fig, fork_fig) # False
+```
+
+Now write a function called `high_rating` that takes a `restaurant` as a first argument and a rating (in the form of a number) as the second argument and returns `True` if the given restaurant's rating is greater than or equal to the provided rating and returns `False` otherwise.
+
+
+```python
+def high_rating(restaurant, rating):
+    pass
 ```
 
 
 ```python
 high_rating(fork_fig, 4) # True
-high_rating(fork_fig, 5) # False
-high_rating(fork_fig) # True
-high_rating(frontier_restaurant) # False
 ```
 
 
+```python
+high_rating(fork_fig, 5) # False
+```
 
 
-    False
-
-
+```python
+high_rating(frontier_restaurant, 4) # False
+```
 
 ### Summary
 
-Great!  Through this lab we saw how to pass arguments to functions, multiple arguments to functions, and how to implement functinons with default arguments.
+Great! In this lab we saw how to pass both single and multiple arguments to functions.

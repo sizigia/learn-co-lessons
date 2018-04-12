@@ -67,18 +67,18 @@ Python is simply indicating that a number without a decimal is called an `int` f
 
 
 ```python
-3/4 + 10
+10 + 0.75
 # 10.75
 ```
 
 
 
 
-    10
+    10.75
 
 
 
-As we can see in the above example, `3/4` would resolve to the `float` `0.75`, and a `float` plus an `int` resolves to a `float`. 
+As we can see in the above example, the `float`, `0.75`, plus the `int`, `10`, resolves to the `float`, `10.75`. 
 
 ### What is a boolean?
 

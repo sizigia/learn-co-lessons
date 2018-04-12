@@ -1,13 +1,15 @@
 
-# Nearest Neighbors
+# Nearest Neighbors Readme
+
+### Introduction
+
+In the last couple of lessons, we talked about **understanding** our data by a discussion about graphing data and a metric for calculating distance between points.  Now we can move onto training a machine learning algorithm and using it to make predictions with data.  We'll do so with the **nearest neighbors** algorithm that we explored in the previous lab.
 
 ###  Learning Objectives
 
 * Understand how to use the Pythagorean Theorem to build a nearest neighbors function
 
-### Writing a nearest neighbors function
-
-Previously, we used the Pythagorean Theorem to calculate distances between individuals.  In the last lab we used this to write a nearest neighbors function to return a list of the closest neighbors to a given individual.  Let's review that now.
+### Explore the data (again)
 
 Once again, here were the locations of Bob and our customers:
 
@@ -30,6 +32,8 @@ neighbors = [{'name': 'Bob', 'x': 4, 'y': 8}, {'name': 'Suzie', 'x': 1, 'y': 11}
 bob = neighbors[0]
 suzie = neighbors[1]
 ```
+
+### Write the algorithm
 
 To write a `nearest_neighbors` function, we break this into steps:
 
@@ -62,13 +66,6 @@ def distance_between_neighbors(selected_individual, neighbor):
 ```python
 distance_between_neighbors(bob, suzie)
 ```
-
-
-
-
-    {'distance': 4.242640687119285, 'name': 'Suzie', 'x': 1, 'y': 11}
-
-
 
 The `distance_between_neighbors` function makes a copy of the neighbor object and then adds a new attribute called distance using the previous `distance` function. So now we have associated a neighbor with his/her distance from a given point.
 
@@ -107,6 +104,10 @@ nearest_neighbors(bob, neighbors)
 ```python
 nearest_neighbors(bob, neighbors, 2)
 ```
+
+Python's `sorted` method lets us sort a list of dictionaries by a certain value. We do so by telling the `sorted` method to compare the values specified in the `lambda` function, in this case `neighbor['distance']`.
+
+We have seen how to access elements from a list by explicitly providing the starting element and stopping element in the following manner: `sorted_neighbors[0:number]`. Above, we implicitly select the first *number* of elements from our list by leaving out the starting element.
 
 ### Summary
 

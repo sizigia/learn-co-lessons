@@ -4,7 +4,7 @@
 ### Learning objectives
 
 * Understand what it means to say that a function is dependent on a variable
-* Understand how to express a multivariable function 
+* Understand how to express a multivariable function
 * Understand how to express a function that is composed of another function, and why we express functions that way  
 
 ### Introduction
@@ -82,7 +82,7 @@ Now take a look at another function:
 
 $$ f = 3x + y$$
 
-To determine this output, we need to know more than a specific value of $x$.  We also need to know the value of $y$.  So it's no longer the case that a specific input of $x$ always returns the same output from this function.  After all, if we fill in that x = 4, then $f = 3*4 + y$, and $f$ would still vary with different $y$ values. 
+To determine this output, we need to know more than a specific value of $x$.  We also need to know the value of $y$.  So it's no longer the case that a specific input of $x$ always returns the same output from this function.  After all, if we fill in that x = 4, then $f = 3*4 + y$, and $f$ would still vary with different $y$ values.
 
 It is not just a specific input of $x$ that returns the same input, but specific inputs of $x$ *and $y$* that always return the same output.  We indicate this like so:
 
@@ -94,7 +94,7 @@ def f(x,y):
     return 3*x + y
 ```
 
-And to indicate that we are evaluating the function at specific values of $x$ and $y$, we write the following: 
+And to indicate that we are evaluating the function at specific values of $x$ and $y$, we write the following:
 
 $$ f(3,4) = 3*3 + 4 = 13$$
 
@@ -169,7 +169,7 @@ But we can really break this function into two:
 ```python
 def error(actual, expected):
     return actual - expected
-    
+
 def squared_error(actual, expected):
     return error(actual, expected)**2
 
@@ -183,7 +183,7 @@ squared_error(4, 2)
 
 
 
-In code, composing our functions from other functions helps us break down a problem.  It will be easier for us understand our code when we refer to it later on.  Similarly, functional composition in mathematics can also help break down problems and assist with readability.  Here is how we express it.  Let's represent the function `error` as $g(x, y) = x - y $, where $x$ represents actual and $y$ represents expected. 
+In code, composing our functions from other functions helps us break down a problem.  It will be easier for us understand our code when we refer to it later on.  Similarly, functional composition in mathematics can also help break down problems and assist with readability.  Here is how we express it.  Let's represent the function `error` as $g(x, y) = x - y $, where $x$ represents actual and $y$ represents expected.
 
 $$g(x, y) = x - y  $$
 
@@ -199,10 +199,10 @@ $$z(x) = (3 + 4x)^2$$
 
 Now let's try to represent with functional composition.  How?  Here's one way:
 
-$$f(x) = 3 + 4x $$ 
+$$f(x) = 3 + 4x $$
 
 $$ g(f(x)) = f(x)^2 $$
 
 ### Summary
 
-In this section, we learned about expressing functions mathematically.  We saw that when what we call a function, the letter we use,whether $f$ or $g$ or $z$, doesn't matter.  We only are giving our function a name that we easily can refer to later on.  In the parentheses, we indicate what the output of the function is dependent on.  Sometimes the output of the function depends on one variable, and sometimes our function depends on multiple variables.  Sometimes our function depends on another *function*, whose output depends on other variables.  
+In this section, we learned about expressing functions mathematically.  We saw that when what we call a function, the letter we use, whether $f$ or $g$ or $z$, doesn't matter.  We only are giving our function a name that we easily can refer to later on.  In the parentheses, we indicate what the output of the function is dependent on.  Sometimes the output of the function depends on one variable, and sometimes our function depends on multiple variables.  Sometimes our function depends on another *function*, whose output depends on other variables.  

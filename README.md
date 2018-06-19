@@ -12,27 +12,27 @@ Previously, we used visualizations to see the closest customers to our salespers
 
 Once again, here are the locations of Bob and our customers:
 
-| Name | Avenue #| Block # | 
+| Name | Avenue #| Block # |
 |------|------| ------     |
-| Bob    | 4  |     8     | 
-| Suzie  | 1  |     11     | 
-| Fred   | 5  |     8     | 
-| Edgar  | 6  |     13     | 
-| Steven | 3  |     6     | 
-| Natalie| 5  |     4     | 
+| Bob    | 4  |     8     |
+| Suzie  | 1  |     11     |
+| Fred   | 5  |     8     |
+| Edgar  | 6  |     13     |
+| Steven | 3  |     6     |
+| Natalie| 5  |     4     |
 
 And here are these locations in the form of a scatter plot.
 ![Customers and Bob](./customers-plot.png "Customers and Bob")
 
 Now, there are no labels in this particular plot, but we should be able to make sense of it anyway.  Our table says that Bob is located at avenue 4 and block 8, and when we look at where the x-axis reaches 4 and the y-axis reaches 8, we see a marker right there - that's Bob.
 
-Now our next task is to calculate the distance between Bob, at $(4, 8)$ and a specific customer, the customer at $(3, 6)$.  In the general form, we can layout our problem by saying we want to calculate the distance between $(x_1, y_1)$ and $(x_2, y_2)$.  And for this example, we can assume that when calculating our distance that avenues and blocks are the same length, so we can just calculate our distance in terms of blocks. 
+Now our next task is to calculate the distance between Bob, at $(4, 8)$ and a specific customer, the customer at $(3, 6)$.  In the general form, we can layout our problem by saying we want to calculate the distance between $(x_1, y_1)$ and $(x_2, y_2)$.  And for this example, we can assume that when calculating our distance that avenues and blocks are the same length, so we can just calculate our distance in terms of blocks.
 
 > Those numbers at the bottom of $(x_1, y_1)$ and $(x_2, y_2)$ are used to say that we are referring to our first $x$ and $y$ values with one point, $(x_1, y_1)$ and our second $x$ and $y$ values of $(x_2, y_2)$.
 
 ### Calculating distance
 
-Here's our first attempt at calculating distance.  To go from our first point of 8th street and 4th avenue to our second point of 6th street and 3rd avenue, we simply go two blocks down and one block to the left for a distance of three blocks.  Now that's a good start, but it's not how mathematicians would calculate distance between points.  Instead they would define distance to be the length of the shortest path between two points, and to acheive this, draw a diagonal straight line between the two points, and calculate the length of that line.  This is called Euclidean distance, and is what we will explain below.  This will be our approach:
+Here's our first attempt at calculating distance.  To go from our first point of 8th street and 4th avenue to our second point of 6th street and 3rd avenue, we simply go two blocks down and one block to the left for a distance of three blocks.  Now that's a good start, but it's not how mathematicians would calculate distance between points.  Instead they would define distance to be the length of the shortest path between two points, and to achieve this, draw a diagonal straight line between the two points, and calculate the length of that line.  This is called Euclidean distance, and is what we will explain below.  This will be our approach:
 
 1. Explain distance as the shortest path between two points - often a diagonal line
 2. Form a right triangle around this diagonal line to make the diagonal part of a triangle  
@@ -49,7 +49,7 @@ That blue diagonal line between the two points is the shortest path between the 
 
 ### Step 2: Forming a Right Triangle around the diagonal
 
-![Customers and Bob](./triangle-definitions.png "Customers and Bob") 
+![Customers and Bob](./triangle-definitions.png "Customers and Bob")
 
 Ok, to calculate that line, we imagine it forms the longest side of a **right triangle**.  With one side of the right triangle spanning horizontally from the lowest x-value to the highest x-value, 3 to 4, and another side spanning vertically from the lowest y-value to the highest y-value, 6 to 8.  Doing this above, you can see we have a nice triangle.
 
@@ -57,7 +57,7 @@ Formally, a right triangle is any triangle where one of the angles is 90 degrees
 
 ### Step 3: Bring in Pythagoras
 
-Ok, this is the formula for calculating the lengths of the sides of a right triangle, called the Pythagorean Theorem: 
+Ok, this is the formula for calculating the lengths of the sides of a right triangle, called the Pythagorean Theorem:
 
 $$ a^2 + b^2 = c^2 $$
 
@@ -69,9 +69,9 @@ This is great because we already have what we need to calculate the length of ou
 
 > To take the absolute value of a number means to not consider whether a number is negative.  So the absolute value of -100 is 100, and the absolute value of -20 is 20.  We indicate the we are taking the absolute value of a number with the use of pipes.  So we can say $ \vert -20  \vert = 20$.
 
-So in our formula of: 
+So in our formula of:
 
-$$ a^2 + b^2 = c^2 $$ we have that: 
+$$ a^2 + b^2 = c^2 $$ we have that:
 $$a = (x_1 - x_2) = \mid 3 - 4 \mid = 1 $$
 $$b = (y_1 - y_2) = \mid 8 - 6 \mid = 2 $$
 
@@ -92,7 +92,7 @@ Writing $\sqrt{5}$ as a distance is perfectly fine.  However, if you would rathe
 > **Square Roots** - Now we can go from a number's square back to the original square with the **square root**.  For example, the square of 4 is 4 $\times$ 4, which equals 16.  And the square root of 16 should undo the operation of squaring, so the square root of 16 equals four, and we denote the square root of 16 as $\sqrt{16}$.
 
 
-> **Inverses ** - In mathematics, **the inverse** is anything that undoes the operation.  So the inverse of squaring is taking the square root.  The inverse of multiplying by ten is dividing by ten.  Here is a question: 
+> **Inverses ** - In mathematics, **the inverse** is anything that undoes the operation.  So the inverse of squaring is taking the square root.  The inverse of multiplying by ten is dividing by ten.  Here is a question:
 
 > *What is the inverse of putting shoes on?*
 
@@ -100,13 +100,13 @@ Writing $\sqrt{5}$ as a distance is perfectly fine.  However, if you would rathe
 
 ### All together now
 
-Now that we have seen how to solve for distance between two points in our example above, let's make sure we know how to do this in general.  We start with the formula: 
+Now that we have seen how to solve for distance between two points in our example above, let's make sure we know how to do this in general.  We start with the formula:
 
 $$ a^2 + b^2 = c^2 $$
-and putting this formula in terms of our two points, $x$ and $y$, we have : 
+and putting this formula in terms of our two points, $x$ and $y$, we have :
 $$ (x_1 - x_2)^2 + (y_1 - y_2)^2 = c^2 $$
 
-and solving for $c$ we have 
+and solving for $c$ we have
 
 $c = \sqrt{(x_{1} - x_{2})^2 + (y_{1} - y_{2})^2}$
 

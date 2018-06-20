@@ -5,7 +5,7 @@
 * Understand how, when we think of the error (cost) of a regression function it varies with changing slope and y-intercept values
 * Understand how to think about the a regression line's cost curve in three dimensions
 
-### Reviewing where we've been and why we're here 
+### Reviewing where we've been and why we're here
 
 Before moving on, let's make sure we understand where we are.  We started this discussion by simply plotting our data.  Then we drew a regression line to estimate how a change in our input affected a change in our output.
 
@@ -15,7 +15,7 @@ Now, because our regression lines do not perfectly predict our data, we put a nu
 
 ![](./cost-curve.png)
 
-Because we want to approach our best fit line in an efficient manner, we look to the slope of our cost curve at the value of a y-intercept to tell us whether to increase or decrease our y-intercept variable and how large of a change to make.   We can make this change even without knowing what the rest of our cost function looks like, and just look to the slope at the current value.  This technique is called gradient descent.  To talk about how to calculate slopes of line, we got into a discussion of derivatives.  We learned how to think about them conceptually, as the instantaneous rate of change, as well as rules for calculating derivatives. 
+Because we want to approach our best fit line in an efficient manner, we look to the slope of our cost curve at the value of a y-intercept to tell us whether to increase or decrease our y-intercept variable and how large of a change to make.   We can make this change even without knowing what the rest of our cost function looks like, and just look to the slope at the current value.  This technique is called gradient descent.  To talk about how to calculate slopes of line, we got into a discussion of derivatives.  We learned how to think about them conceptually, as the instantaneous rate of change, as well as rules for calculating derivatives.
 
 ![](./tangent-lines.png)
 
@@ -27,7 +27,7 @@ But in our regression line of $y = mx + b $ it is not just the y-intercept, $b$,
 
 ![](./regression-scatter.png)
 
-So now, thinking about our cost curve, it is really not a two dimensional curve that we are walking along, but a three dimensional one.  Three dimensions allows us to plot various values of $m$, $b$, and the cost associated witht these values.
+So now, thinking about our cost curve, it is really not a two dimensional curve that we are walking along, but a three dimensional one.  Three dimensions allows us to plot various values of $m$, $b$, and the cost associated with these values.
 
 ![gradientdescent.png](attachment:gradientdescent.png)
 
@@ -49,7 +49,7 @@ This is what it looks like:
 
 It takes a minute to see it, but this three dimensional graph of $f(x,y) = y*x^2$ makes sense.  Here's why.  Let's remember that the function $f(x) = x^2$ looks just like a smiley face.  Mathematicians call the smiley face a parabola.
 
-<img src="./parabola.png" alt="Drawing" style="width: 300px;"/> 
+<img src="./parabola.png" alt="Drawing" style="width: 300px;"/>
 
 Our parabola reflects our function squaring it's output for every input.  So for the function, $f(x) = x^2$, $f(2) = 4 $ and $f(3) = 9 $.
 
@@ -59,7 +59,7 @@ Take a look one by one at the graphs below, which display what happens as we ste
 
 ![](./yx2-frames.png)
 
-You can almost think of the graphs above as different freeze frames of our three dimensional function.  And we can view the three dimensional version as taking us from negative $y$ values to positive $y$ values, almost like having a movie take us through these frames in a cohesive viewing experience. 
+You can almost think of the graphs above as different freeze frames of our three dimensional function.  And we can view the three dimensional version as taking us from negative $y$ values to positive $y$ values, almost like having a movie take us through these frames in a cohesive viewing experience.
 
 ![](./parabolayx2.png)
 
@@ -71,12 +71,12 @@ With a deeper understanding of 3-d graphs, let's return to thinking about our re
 
 ![](./gradientdescent.png)
 
-You may be able to see how changing our regression line below relates to a moving along our 3-d graph and a change in our cost function's output as displayed directly above. 
+You may be able to see how changing our regression line below relates to a moving along our 3-d graph and a change in our cost function's output as displayed directly above.
 
 ![](./regression-scatter.png)
 
 If you feel comfortable with that, give yourself a pat on the back.
 
-### Summary 
+### Summary
 
 In this section, we started thinking about the cost related to a dimension line not only as a y-intercept changes, but also as the slope changes.  To do this, we talked about multivariable functions in general, and how one can even think of of a three dimensional graphs in terms of successive two dimensional graphs.  This is how we can think of our cost curve, as matter of shifting one or both of the variables of our regression line, and seeing the resulting change to the function's accuracy.   

@@ -3,9 +3,9 @@
 
 ### Introduction
 
-In this lesson, we have decided to visit another of our travel destinations! This time we have chosen to visit Albuquerque, but we aren't very familiar with this city and are quite hungary after our long flight. We will be working with information we pulled from the Yelp database to help us find a restaurant where we can satisfy our hunger. While Yelp is great for learning about what to do in Albuquerque, it gives us back a lot of information. We'll use what we know about functions and dictionaries to format and read our data more easily. 
+In this lesson, we have decided to visit another of our travel destinations! This time we have chosen to visit Albuquerque, but we aren't very familiar with this city and are quite hungry after our long flight. We will be working with information we pulled from the Yelp database to help us find a restaurant where we can satisfy our hunger. While Yelp is great for learning about what to do in Albuquerque, it gives us back a lot of information. We'll use what we know about functions and dictionaries to format and read our data more easily. 
 
-### Exploring Two Restuarants in Albuquerque
+### Exploring Two Restaurants in Albuquerque
 
 Let's take a quick look at the information Yelp provides for a single restaurant:
 
@@ -88,7 +88,7 @@ As we can see from our above comparison, Yelp provides us with the same informat
 
 ### Writing our functions
 
-Ok, now let's write our functions.  Write a function called `restaurant_name` that, provided a dictionary representing a restaurant like you saw above, resturns that restaurant's name.
+Ok, now let's write our functions.  Write a function called `restaurant_name` that, provided a dictionary representing a restaurant like you saw above, returns that restaurant's name.
 
 
 ```python
@@ -149,7 +149,7 @@ is_better(fork_fig, frontier_restaurant) # True
 is_better(fork_fig, fork_fig) # False
 ```
 
-Now let's write a function called `is_cheaper` that returns `True` if a restaurant has a higher price, that is the restaurnat has more `'$'` signs, than an alternative restaurant. The first argument should be called `restaurant` and the second argument should be called `alternative`. The function returns `False` if the two prices are equal.
+Now let's write a function called `is_cheaper` that returns `True` if a restaurant has a lower price, that is the restaurant has fewer `'$'` signs, than an alternative restaurant. The first argument should be called `restaurant` and the second argument should be called `alternative`. The function returns `False` if the two prices are equal.
 
 > **Hint:** *Strings in Python respond to then `len` function.*
 
@@ -194,7 +194,7 @@ high_rating(fork_fig, 5) # False
 
 
 ```python
-high_rating(frontier_restaurant, 4) # False
+high_rating(frontier_restaurant, 4) # True
 ```
 
 ### Summary

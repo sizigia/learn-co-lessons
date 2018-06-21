@@ -16,7 +16,7 @@ There are various Python visualization tools we can use to display our data. In 
 
 We can easily download the `plotly` library with the use of `pip`.  
 
-> Pip is a package management system that allows us to easily download and install libraries written in Python.  If you are working on Learn, we have already installed pip for you.  We will not walk through installing pip here, however you can find instructions on installing pip [for Mac](./http://softwaretester.info/install-and-upgrade-pip-on-mac-os-x/) or [for Windows](https://www.youtube.com/results?search_query=instally+pip+windows) online.  Also, if you are familiar with working with a terminal and have `easy_install`, you can run `sudo easy_install pip` from the terminal.
+> Pip is a package management system that allows us to easily download and install libraries written in Python.  If you are working on Learn, we have already installed pip for you.  We will not walk through installing pip here, however you can find instructions on installing pip [for Mac](http://softwaretester.info/install-and-upgrade-pip-on-mac-os-x/) or [for Windows](https://www.youtube.com/results?search_query=instally+pip+windows) online.  Also, if you are familiar with working with a terminal and have `easy_install`, you can run `sudo easy_install pip` from the terminal.
 
 To install a package with pip, the general pattern is to run `pip install` followed by the name of the package.  We generally do this from a terminal (whatever that is), but you can also install packages directly from Jupyter, like so:
 
@@ -97,6 +97,6 @@ As we can see, each trace is an associated collection of data, and a plot can di
 
 ### Summary
 
-In this section, we saw how to use data visualisations to better understand the data.
+In this section, we saw how to use data visualizations to better understand the data.
 
 To display the data with `plotly` we need to do a couple of things.  First, we installed plotly by going to our terminal and running `pip install plotly`.  Then to use the library, we import the `plotly` library into our notebook.  Once the library is loaded in our notebook, it's time to use it.  We create a new dictionary with keys of $x$ and $y$, with each key pointing to an array of the $x$ or $y$ values of our points.  We can pass through a list of traces, with each trace representing associated data.

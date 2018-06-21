@@ -3,19 +3,19 @@
 
 ### Introduction
 
-In the previous lesson we described our machine learning process as the following:
+The machine learning process is generally as follows:
 
-* Gather and clean the data
+* Gather and clean the data 
 * Study the data
-* Select a model
-* Training: Optimize the model for some other criteria (eg. how well the model predicts our known labeled data)
+* Select a model 
+* Train: Optimize the model for some other criteria (eg. how well the model predicts our known labeled data)
 * Use the model predict on new data
 
-We learned how to use Python to gather and clean the data, and now it's time to focus on exploring the data with visualization and graphs.
+In the previous section, we learned some basic Python tools to help us gather and clean data.  Now it's time to focus on exploring the data with visualization and graphs.
 
 ### Learning Objectives
 
-* Understand the components of a point in a graph, an $x$ value, and a $y$ value
+* Understand the components of a point in a graph, an $x$ value, and a $y$ value 
 * Understand where to place a point on a graph, from knowing a point's $x$ and $y$ value
 * Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
 
@@ -25,14 +25,14 @@ Imagine that Molly is selling cupcakes out of her kitchen.  She gains more and m
 
 Molly gives us a list of all of the customer locations, along with Bob's.  Here they are:
 
-| Name | Avenue #| Block # |
+| Name | Avenue #| Block # | 
 |------|------| ------     |
-| Bob    | 4  |     8     |
-| Suzie  | 1  |     11     |
-| Fred   | 5  |     8     |
-| Edgar  | 6  |     13     |
-| Steven | 3  |     6     |
-| Natalie| 5  |     4     |
+| Bob    | 4  |     8     | 
+| Suzie  | 1  |     11     | 
+| Fred   | 5  |     8     | 
+| Edgar  | 6  |     13     | 
+| Steven | 3  |     6     | 
+| Natalie| 5  |     4     | 
 
 Now to determine the person closest to Bob you decide to make a graph of each customer's locations, as well as Bob's, in a graph.
 
@@ -53,14 +53,14 @@ The light-gray lines form a grid on the graph to help us see where any given **p
 Ok, now let's plot the data given.  
 
 
-| Name | Avenue #| Block # |
+| Name | Avenue #| Block # | 
 |------|------| ------     |
-| Bob    | 4  |     8     |
-| Suzie  | 1  |     11     |
-| Fred   | 5  |     8     |
-| Edgar  | 6  |     13     |
-| Steven | 3  |     6     |
-| Natalie| 5  |     4     |
+| Bob    | 4  |     8     | 
+| Suzie  | 1  |     11     | 
+| Fred   | 5  |     8     | 
+| Edgar  | 6  |     13     | 
+| Steven | 3  |     6     | 
+| Natalie| 5  |     4     | 
 
 
 We cannot graph the data with python itself, so we need to download a library from the Internet.  This is easy enough.  Simply go to your terminal and type in `pip install plotly` followed by the enter key.  Or you can press shift enter on the cell below.  If you already have `plotly` installed, you will see a message saying that it's already installed -- which you can safely ignore.
@@ -109,8 +109,8 @@ The lines are getting in the way.  Let's remove all of the connecting lines by s
 
 ```python
 trace1 = dict(x=[4, 1, 5, 6, 3, 2],
-              y=[8, 11, 8, 13, 6, 4],
-              mode="markers",
+              y=[8, 11, 8, 13, 6, 4], 
+              mode="markers", 
               text=["bob", "suzie", "fred", "edgar", "steven", "natalie"],)
 
 

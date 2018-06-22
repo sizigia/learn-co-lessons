@@ -3,7 +3,9 @@
 
 ### Introduction
 
-The machine learning process is generally as follows:
+In the previous section, we introduced all of the basic Python tools: datatypes, variables, data collections like lists and dictionaries, functions, loops, and iterators.  We will use these skills throughout our data science career.
+
+Let's step back and take a look from the macro perspective.  The machine learning process is generally as follows:
 
 * Gather and clean the data 
 * Study the data
@@ -11,7 +13,7 @@ The machine learning process is generally as follows:
 * Train: Optimize the model for some other criteria (eg. how well the model predicts our known labeled data)
 * Use the model predict on new data
 
-In the previous section, we learned some basic Python tools to help us gather and clean data.  Now it's time to focus on exploring the data with visualization and graphs.
+The tools we learned in the previous section will help us gather and clean data.  We touched on studying the data with visualizations using the Plotly library in the previous section, but now it's time to take a deeper dive into exploring data with visualizations.
 
 ### Learning Objectives
 

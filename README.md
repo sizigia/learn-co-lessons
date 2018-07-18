@@ -39,10 +39,6 @@ plotly.offline.init_notebook_mode(connected=True)
 # use offline mode to avoid initial registration
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
 In the code above, we bring in the `plotly` library by using the keyword `import` followed by our library name, `plotly`.  Then we call the method `plotly.offline.init_notebook_mode(connected=True)` so that we do not have to connect plotly to a registered account online.  If you are wondering how to we know all of this, you simply ask Google.
 
 ![](./plotly-no-account.png)

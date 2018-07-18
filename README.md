@@ -66,14 +66,6 @@ trace0 = {'type': 'bar', 'x': ['jack', 'jill', 'sandy'], 'y': [8, 11, 10]}
 plotly.offline.iplot([trace0])
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
-
-<div id="ae2b19bc-c7f7-465c-8a73-ee614ba601fb" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("ae2b19bc-c7f7-465c-8a73-ee614ba601fb", [{"type": "bar", "x": ["jack", "jill", "sandy"], "y": [8, 11, 10]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
-
 It may be confusing understanding what a trace is, and how it is different from a plot. The easiest way to explain it is maybe to show how the `iplot` method takes in a list of two traces, instead of just one.
 
 
@@ -84,10 +76,6 @@ trace1 = {'type': 'bar', 'x': ['jack', 'jill', 'sandy', 'gob'], 'y': [4, 12, 3, 
 
 plotly.offline.iplot([trace0, trace1])
 ```
-
-
-<div id="7606a8a6-d17e-454f-b5e2-b1f326d55f63" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("7606a8a6-d17e-454f-b5e2-b1f326d55f63", [{"type": "bar", "x": ["jack", "jill", "sandy", "blaise"], "y": [8, 11, 8, 13, 6, 4]}, {"type": "bar", "x": ["jack", "jill", "sandy", "gob"], "y": [4, 12, 3, 14, 8, 1]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
 
 As we can see, each trace is an associated collection of data, and a plot can display more than one trace.
 

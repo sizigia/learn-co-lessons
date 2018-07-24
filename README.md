@@ -7,7 +7,7 @@
 * Boolean values and how we can use them in our code
 * Deciding which datatypes to use in our program
 
-All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think about what the common operations are with numbers, we get a pretty good idea for what Python allows us to do with numbers.
+All of us are familiar with numbers.  1492 is a number.  So is 34.  If we think about what we usually do with numbers, we get a pretty good idea for what Python provides support for.
 
 
 ```python
@@ -63,7 +63,7 @@ type(10.2)
 
 
 
-Python is simply indicating that a number without a decimal is called an `int` for integer, and a number with a decimal is called a `float`. For now, we can think of both of these as numbers.
+Python is simply indicating that a number without a decimal is called an `int` for integer, and a number with a decimal is called a `float` (for "floating point"). For now, we can think of both of these as numbers, although later we'll have to learn about the complexities of doing math with floating point numbers.
 
 
 ```python
@@ -144,9 +144,9 @@ You will see later on that by utilizing these returned booleans, we can make dec
 
 ### Datatypes as a choice
 
-> "Bad programmers worry about the code. Good programmers worry about data structures and their relationships." - Torvald 
+> "Bad programmers worry about the code. Good programmers worry about data structures and their relationships." - Linus Torvald 
 
-For now, it's interesting to think of how methods allow us to change between datatypes and to think of when we may want our data to be in one datatype versus another.  We started this lesson by saying that 34 is a number.  But what if it's not?
+For now, it's interesting to think of how methods allow us to change between datatypes and to think of when we may want our data to be one datatype versus another.  We started this lesson by saying that 34 is a number.  But what if it's not?
 
 
 ```python
@@ -208,7 +208,7 @@ But would a method like less than ( `<` ) work with a string? Does it make sense
 
 
 
-Well, now we know for sure.  So, if we want to help our restaurant with deliveries, we should convert our number from a string to a number and then make the comparison.
+Well, now we know for sure.  So, if we want to help our restaurant with deliveries, we should convert from a string to a number and then make the comparison.
 
 
 ```python
@@ -272,4 +272,4 @@ Great, so we can coerce a number to a boolean as well.  And we are beginning to 
 
 In this section, we introduced two new types of data: numbers and booleans. We saw that numbers allow us to perform standard math operations, and we saw that booleans answer whether something is True or False, and serve as a way our program or different methods can respond to questions.
 
-We have seen almost all of our Python datatypes, we talked about how to choose a datatype, and we talked about how to switch between datatypes.  We said that we choose a datatype based on the capabilities that we want to give to that data: should it answer whether it is larger or smaller, or does it make sense to capitalize? The goal of this discussion is to begin thinking about why we decide to put data in specific types (i.e. string, number, boolean). We also introduced coercion methods like `bool` and `str` that switch between datatypes. 
+We have seen almost all of our Python datatypes, we talked about how to choose a datatype, and we talked about how to switch between datatypes.  We said that we choose a datatype based on the capabilities that we want to give to that data: should it answer whether it is larger or smaller, or does it make sense to capitalize? The goal of this discussion is to begin thinking about why we decide to put data in specific types (i.e. string, number, boolean). We also introduced coercion methods like `bool` and `str` that coerce/force/switch between datatypes. 

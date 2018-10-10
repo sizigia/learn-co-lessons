@@ -24,7 +24,7 @@ To install a package with pip, the general pattern is to run `pip install` follo
 
 
 ```python
-!pip install plotly
+!pip install plotly==3.3.0
 ```
 
 > Remember to use shift + enter to run the line above.

@@ -31,7 +31,7 @@ Now as our models become more complex and there are more levers to pull, having 
 ### Summary
 
 So in summary:
-* we'll use other types of models beyond drawing a regression line.  
+* We'll use other types of models beyond drawing a regression line.  
 * However, there will be loss functions.  
 * And we will want adapt our model so that it begins to minimize the output from our loss function.  
 * That is training our model.  

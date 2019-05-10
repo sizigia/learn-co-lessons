@@ -7,10 +7,10 @@ Before moving on, let's take a step back.
 
 In the supervised learning algorithms that we have looked at so far, we are chugging along by following our process.
 
-* **Collect**: Gather and clean the relevant data
-* **Explore**: Explore the data
-* **Train**: Choose a statistical or machine learning model (ie. a tool or algorithm) and optimize the model for some criteria (eg. how well the model predicts our data)
-* **Predict**: Make predictions with the trained model
+- **Collect**: Gather and clean the relevant data
+- **Explore**: Explore the data
+- **Train**: Choose a statistical or machine learning model (ie. a tool or algorithm) and optimize the model for some criteria (eg. how well the model predicts our data)
+- **Predict**: Make predictions with the trained model
 
 As we mentioned, for collecting and exploring the data we mainly use our Python skills and knowledge about the domain.  Training a model is more about machine learning.  
 

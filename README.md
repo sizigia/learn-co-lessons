@@ -1,9 +1,9 @@
 
 # Multivariable Functions
 
-* Understand how multivariable function can be represented as a 3d graph
-* Understand how, when we think of the error (cost) of a regression function it varies with changing slope and y-intercept values
-* Understand how to think about the a regression line's cost curve in three dimensions
+- Understand how multivariable function can be represented as a 3d graph
+- Understand how, when we think of the error (cost) of a regression function it varies with changing slope and y-intercept values
+- Understand how to think about the a regression line's cost curve in three dimensions
 
 ### Reviewing where we've been and why we're here
 

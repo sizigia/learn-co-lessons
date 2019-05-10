@@ -3,9 +3,9 @@
 
 ### Learning objectives
 
-* Understand what it means to say that a function is dependent on a variable
-* Understand how to express a multivariable function
-* Understand how to express a function that is composed of another function, and why we express functions that way  
+- Understand what it means to say that a function is dependent on a variable
+- Understand how to express a multivariable function
+- Understand how to express a function that is composed of another function, and why we express functions that way  
 
 ### Introduction
 

@@ -3,8 +3,8 @@
 
 ### Learning Objectives
 
-* Get a sense of how to use a graphing library, like Plotly, to answer questions about how to visualize our data
-* Understand how our dictionary and list data structures can represent graphical information
+- Get a sense of how to use a graphing library, like Plotly, to answer questions about how to visualize our data
+- Understand how our dictionary and list data structures can represent graphical information
 
 ### Introduction
 

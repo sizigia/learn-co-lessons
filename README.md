@@ -81,3 +81,29 @@
     - Gradient To Cost Function
     - Applying Gradient Descent
     - Applying Gradient Descent Lab
+
+## Python Interview Prep
+- Dictionaries
+    - Python Dictionaries Readme
+    - Excel To Python
+    - Python Dictionaries Lab
+- Visualizing in Python
+    - Plotting Data Readme
+    - Plotting Data Lab
+- For Loops
+    - For Loops Readme
+    - Python For Loops Lab
+
+## Math Interview Prep
+- Expressing Functions
+    - Why Math
+    - Expressing Functions
+- Derivatives
+    - Introduction To Derivatives
+    - Introduction To Derivatives Lab
+    - Nonlinear Derivatives Readme
+    - Derivative Rules
+    - Rules For Derivative Lab
+    - Multivariable Functions
+    - Multivariable Calculus Gradient Descent
+    - Partial Derivatives Lab

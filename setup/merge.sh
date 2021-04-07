@@ -16,15 +16,6 @@ envup() {
 
 envup 
 
-EXTGLOB="$(shopt |grep extglob)"
-
-if [[ $EXTGLOB =~ "extglob off" ]]; then
-    shopt -s extglob || echo "Enabled extglob"
-else
-    echo "extglob already enabled"
-fi
-
-
 for repos in "${!clones[*]}" ; do 
     for repo in ${repos} ; do
         OLD_REPO=$SOURCE$repo

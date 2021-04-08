@@ -1,5 +1,6 @@
-# Code from Taylor Perkins (GitHub username: taylorperkins)
-# Project repository: https://github.com/taylorperkins
+# Code from Taylor Perkins (https://github.com/taylorperkins)
+# Original project repository: https://github.com/taylorperkins/Github-Repository-Transfer
+# Fork: https://github.com/sizigia/Github-Repository-Transfer
 
 import json
 import requests
@@ -18,6 +19,7 @@ class TransferRepos:
 
         self._TRANSFER_URL = _BASE_URL.format(
             ext="repos/{username}/{repository}/transfer")
+
         self._REPOSITORY_URL = _BASE_URL.format(ext="users/{username}/repos")
 
         self._TRANSFER_HEADERS = {
@@ -25,6 +27,9 @@ class TransferRepos:
             "Content-Type": "application/json",
             "Authorization": "token {}".format(token)
         }
+
+        self._REPOSITORIES_URL_ = self._REPOSITORY_URL.format(
+            username=self._username) + '?&per_page=999'
 
     @staticmethod
     def _validate_response(response):
@@ -36,7 +41,7 @@ class TransferRepos:
 
     def get_repos(self):
         response = requests.get(
-            self._REPOSITORY_URL.format(username=self._username)
+            self._REPOSITORIES_URL_.format(username=self._username)
         )
 
         repos = json.loads(self._validate_response(response=response))

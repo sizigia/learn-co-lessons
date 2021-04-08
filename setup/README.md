@@ -123,3 +123,10 @@
         ```bash
         git push origin master
         ```
+3. Since I'm doing a spring clean on GitHub and leaving only repos that spark joy ✨... Let's transfer all the repos to a secondary account.
+    
+    Working with APIs can be.. wholesome. After some dabbling on my own, while looking for some examples on how to DIY in Python, I found [this repo](https://github.com/taylorperkins/Github-Repository-Transfer).
+    
+    I had to fork it and do [some minor changes](transfer.py) to be able to get all my repositories, and transfer them.
+    
+    Here's the [Python script](transfer_repos.py) I used to transfer the **lesson** repositories.
